@@ -13,39 +13,48 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
+// recVolume = function (height) {
+//   let n = 3
+//   let volume
+//   let area
+
+//   return getlengthandwidth = function (dimension) {
+//     n--
+//     if (n === 2) {
+//       area = height * dimension
+//       return getlengthandwidth
+//     }
+//     if (n === 1) {
+//       return volume = area * dimension
+//     }
+//     if (n <= 0) {
+//       return volume
+//     }
+//   }
+// }
+
+
 recVolume = function (height) {
-  let n = 3
+  let dimensions = [height]
   let volume
-  let area
-
-  return getlengthandwidth = function (dimension) {
-
-    n--
-
-    if (n === 2) {
-
-      area = height * dimension
-      return getlengthandwidth
-
+  Volumefinder = function(dimension){
+    dimensions.push(dimension)
+    if(dimensions.length === 3){
+      return volume = dimensions.reduce(function(accum, current){
+        return accum * current
+      })
     }
-
-    if (n === 1) {
-
-      volume = area * dimension
-      return volume
-
+    else if(dimensions.length > 3){
+    return volume
     }
-
-    if (n <= 0) {
-
-      return volume
-
+    else{
+      return Volumefinder
     }
-
-
   }
 
-}
+  return Volumefinder
+  }
+
 
 
 console.log(getlengthandwidth = recVolume(2))
